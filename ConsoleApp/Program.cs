@@ -37,6 +37,9 @@ namespace ConsoleApp
                 Console.WriteLine(weekday);
             }
 
+            Shape shape1 = new Shape();
+            Shape shape2 = new Shape("Ananth");
+
                    
         }
 
@@ -48,5 +51,19 @@ namespace ConsoleApp
             }
         }
 
+    }
+
+    internal class Shape
+    {
+        public Shape()
+        {
+            Console.WriteLine("Calling the default constructor");
+        }
+
+        public Shape(string name)
+        {
+            string welcomeString = $"Welcome {name} to the parameratized constructor";
+            Console.WriteLine(welcomeString);
+        }
     }
 }

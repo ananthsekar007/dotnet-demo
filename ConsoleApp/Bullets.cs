@@ -8,7 +8,7 @@ namespace ConsoleApp
 {
     internal class Bullets
     {
-        public static void Main(string[] args)
+        public void Main(string[] args)
         {
             int totalBullets = 50;
             int bulletNumberFired = 0;
@@ -18,7 +18,7 @@ namespace ConsoleApp
             hero.shoot();
             villian.shoot();
             hero.shoot();
-
+            villian.shoot();
         }
     }
 

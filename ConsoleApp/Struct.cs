@@ -28,7 +28,7 @@ namespace ConsoleApp
     }
     internal class Struct
     {
-        public static void Main(string[] args)
+        public void Main(string[] args)
         {
             Age age = new()
             {

@@ -24,7 +24,7 @@ namespace ConsoleApp
         {
             monday, tuesday, wednesday, thursday, friday
         }
-        static void Main(string[] args)
+         void Main(string[] args)
         {
             //string[] names = { "Ananth", "Sekar", "Nivetha" };
             //printArray(names);

@@ -44,8 +44,17 @@ namespace ConsoleApp
             //shape2.determineShape();
             //shape3.determineShape();
 
-            Arithmetic arithmetic = new Arithmetic(1, 0);
-            arithmetic.divide();
+            //Arithmetic arithmetic = new Arithmetic(1, 0);
+            //arithmetic.divide();
+
+            Voter voter = new Voter("Ananth", 11);
+            try
+            {
+                voter.isEligible();
+            }
+            catch (AgeLimitException ex) {
+                Console.WriteLine($"Message : {ex.Message}");
+            }
         }
 
         public static void printArray(string[] names)
@@ -56,6 +65,42 @@ namespace ConsoleApp
             }
         }
 
+    }
+
+    [Serializable] public class AgeLimitException: Exception {
+    
+        public AgeLimitException()
+        {
+
+        }
+
+        public AgeLimitException(string message): base(message)
+        {
+            Console.WriteLine(message);
+        }
+    }
+
+    internal class Voter
+    {
+        string name;
+        int age;
+
+        public Voter()
+        {
+
+        }
+
+        public Voter(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }    
+
+        public void isEligible()
+        {
+            if (age < 18) throw new AgeLimitException($"{this.name} , you are not eligible to vote");
+            Console.WriteLine($"{this.name}, You are eligible to vote");
+        }
     }
 
     internal class Arithmetic

@@ -11,10 +11,20 @@ namespace GenericNameSpace
 
     internal class Generics
     {
-        public void Main(string[] args)
+        public static  void Main(string[] args)
         {
-            Message<string> message = new Message<string>("Hi");
+            var exampleIntegerSet = new SortedSet<int>(){ 5, 8, 1, 3, 1, 3, 10 };
+            var exampleCharSet = new SortedSet<char>() { 'B', 'L', 'A', 'D' };
 
+            foreach(var example in exampleIntegerSet)
+            {
+                Console.WriteLine($" IntegerSet - {example}");
+            }
+
+            foreach (var example in exampleCharSet)
+            {
+                Console.WriteLine($"Char set - {example}");
+            }
         }
     }
 

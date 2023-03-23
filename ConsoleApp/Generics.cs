@@ -11,7 +11,7 @@ namespace GenericNameSpace
 
     internal class Generics
     {
-        public static  void Main(string[] args)
+        public  void Main(string[] args)
         {
             //var exampleIntegerSet = new SortedSet<int>(){ 5, 8, 1, 3, 1, 3, 10 };
             //var exampleCharSet = new SortedSet<char>() { 'B', 'L', 'A', 'D' };

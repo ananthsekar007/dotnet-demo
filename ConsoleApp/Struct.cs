@@ -20,13 +20,24 @@ namespace ConsoleApp
                 age = value;
             }
         }
+
+        public void call()
+        {
+            Console.WriteLine("Function call");
+        }
     }
     internal class Struct
     {
         public static void Main(string[] args)
         {
-            Age age = new Age();
-            age.PersonAge = Convert.ToInt32(Console.ReadLine());
+            Age age = new()
+            {
+                PersonAge = 1
+            };
+
+            age.call();
+
+            
 
             Console.WriteLine($"The age of the person is {age.PersonAge}");
 

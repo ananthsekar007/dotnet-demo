@@ -39,9 +39,10 @@ namespace ConsoleApp
 
             Shape shape1 = new Shape();
             Shape shape2 = new Shape(2,3);
+            Shape shape3 = new Shape(2, 2);
 
             shape2.determineShape();
-
+            shape3.determineShape();
                    
         }
 
@@ -83,6 +84,11 @@ namespace ConsoleApp
             {
                 Console.WriteLine("This is the dimesions of a rectangle with length = {0} and breadth = {1}", this.length, this.breadth);
             }
+        }
+
+        ~Shape()
+        {
+            Console.WriteLine("The desctructor is called");
         }
 
     }

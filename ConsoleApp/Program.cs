@@ -84,7 +84,7 @@ namespace ConsoleApp
             }
             catch(DivideByZeroException e)
             {
-                throw new DivideByZeroException();
+                Console.WriteLine($"DivideByZero: {e.Message}");
             }
             finally
             {

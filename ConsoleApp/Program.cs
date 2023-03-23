@@ -37,13 +37,15 @@ namespace ConsoleApp
             //    Console.WriteLine(weekday);
             //}
 
-            Shape shape1 = new Shape();
-            Shape shape2 = new Shape(2,3);
-            Shape shape3 = new Shape(2, 2);
+            //Shape shape1 = new Shape();
+            //Shape shape2 = new Shape(2,3);
+            //Shape shape3 = new Shape(2, 2);
 
-            shape2.determineShape();
-            shape3.determineShape();
-                   
+            //shape2.determineShape();
+            //shape3.determineShape();
+
+            Arithmetic arithmetic = new Arithmetic(1, 0);
+            arithmetic.divide();
         }
 
         public static void printArray(string[] names)
@@ -53,6 +55,43 @@ namespace ConsoleApp
                 Console.WriteLine(name);
             }
         }
+
+    }
+
+    internal class Arithmetic
+    {
+        int a;
+        int b;
+
+        public Arithmetic() {
+
+            Console.WriteLine("called");
+        }
+
+
+        public Arithmetic(int a, int b)
+        {
+            this.a = a;
+            this.b = b;
+        }
+
+        public void divide()
+        {
+            try
+            {
+                int result = this.a / this.b;
+                Console.WriteLine("The result of division is {0}", result);
+            }
+            catch(DivideByZeroException e)
+            {
+                throw new DivideByZeroException();
+            }
+            finally
+            {
+                Console.WriteLine("Finally is called");
+            }
+        }
+
 
     }
 

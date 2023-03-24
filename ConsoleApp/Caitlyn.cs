@@ -8,9 +8,10 @@ namespace ConsoleApp
 {
     internal class Caitlyn
     {
-        public static void Main(string[] args)
+        public  void Main(string[] args)
         {
-            ChocolateDispenser chocolateDispenser = new ChocolateDispenser();
+            LinkedList<string> list = new LinkedList<string>();
+            ChocolateDispenser chocolateDispenser = new(list);
 
             chocolateDispenser.AddChocolates("RED", 2);
             chocolateDispenser.AddChocolates("BLUE", 4);
@@ -31,6 +32,11 @@ namespace ConsoleApp
     {
         LinkedList<string> chocolateDispenser;
 
+        public ChocolateDispenser(LinkedList<string> chocolateDispenser)
+        {
+            this.chocolateDispenser = chocolateDispenser;
+        }
+
         public void AddChocolates(string color, int count)
         {
             for(int i = 0; i < count; i++)
@@ -45,7 +51,7 @@ namespace ConsoleApp
         
             for(var i = 0; i < count;i++)
             {
-                removedChocolates.Add(removedChocolates.Last());
+                removedChocolates.Add(chocolateDispenser.Last());
                 chocolateDispenser.RemoveLast();
             }
             return removedChocolates;

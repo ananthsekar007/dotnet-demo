@@ -13,6 +13,7 @@ namespace ConsoleApp
             StringOperation stringOperation = new(Console.ReadLine());
             Console.WriteLine(stringOperation.ExchangeString());
             Console.WriteLine(stringOperation.AddCharAtFrontAndEnd());
+            Console.WriteLine(stringOperation.RemoveOkFromString());
         }
     }
 
@@ -36,6 +37,17 @@ namespace ConsoleApp
              }
             var lastChar = firstString.ElementAt(firstString.Length - 1);
             return  lastChar+ firstString + lastChar;
+        }
+
+        public string RemoveOkFromString()
+        {
+            string outStr = this.firstString;
+            while(outStr.Contains("ok"))
+            {
+
+                outStr = outStr.Replace("ok", "", StringComparison.OrdinalIgnoreCase);
+            }
+            return outStr;
         }
     }
 }

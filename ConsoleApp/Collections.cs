@@ -9,15 +9,16 @@ namespace ConsoleApp
 {
     internal class Collections
     {
-        public static void Main(string[] args)
+        public void Main(string[] args)
         {
 
-            Collections.DisplayUnique();
+            //Collections.DisplayUnique();
             Collections.MergeArrays();
             Collections.SeperateOddAndEven();
+
         }
 
-        public static void DisplayUnique()
+        public void DisplayUnique()
         {
             int arrayLength = Convert.ToInt32(Console.ReadLine());
             List<int> numberArray = new List<int>();

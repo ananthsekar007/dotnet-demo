@@ -8,7 +8,7 @@ namespace ConsoleApp
 {
     internal class Sara
     {
-        public static void Main(string[] args)
+        public void Main(string[] args)
         {
             List<PsychTest> resultList = new List<PsychTest>();
             while (true)

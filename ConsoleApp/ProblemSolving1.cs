@@ -42,7 +42,7 @@ namespace ConsoleApp
         public string RemoveOkFromString()
         {
             string outStr = this.firstString;
-            while(outStr.Contains("ok"))
+            while(outStr.Contains("ok", StringComparison.OrdinalIgnoreCase))
             {
 
                 outStr = outStr.Replace("ok", "", StringComparison.OrdinalIgnoreCase);

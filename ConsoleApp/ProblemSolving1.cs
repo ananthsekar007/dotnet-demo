@@ -8,7 +8,7 @@ namespace ConsoleApp
 {
     internal class ProblemSolving1
     {
-        public static void Main(string[] args)
+        public void Main(string[] args)
         {
             StringOperation stringOperation = new(Console.ReadLine());
             Console.WriteLine(stringOperation.ExchangeString());
